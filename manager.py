@@ -3,7 +3,7 @@ from queue import Queue
 class ContinuousIntegrationManager:
     def __init__(self, number_of_workers: int = 2, max_job_queue_size: int = 10, max_starvation_duration: int = 10):
         self.job_queue = Queue(maxsize=max_job_queue_size)
-        self.priority_jobs = []  # Nova lista para os trabalhos prioritários
+        self.priority_jobs = []
         self.number_of_workers = number_of_workers
         self.max_starvation_duration = max_starvation_duration
         self.workers = []
